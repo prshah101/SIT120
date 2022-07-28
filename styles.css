@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(182, 240, 248);
+}
+
+.mainDiv {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1000px;
+  width: 700px;
+  padding-left: 50px;
+}
+
+.mainContent{
+  padding-left: 130px;
+}
