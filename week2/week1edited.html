@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    p {
+      color: blueviolet;
+    }
+
+    /* When the width of the screen is 800 pixels or less, the background-color will be pink */
+    @media only screen and (max-width: 800px) {
+      body {
+        background-color: lightpink;
+      }
+    }
+
+    /* When the width of the screen is 800 pixels or less, the audio will dissapear */
+    @media screen and (max-width: 800px) {
+      div.audio {
+        display: none;
+      }
+    }
+
+    .column {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 800px) {
+      .column {
+        width: 50%;
+      }
+    }
+  </style>
+  <script src="./task3.js"></script>
+  <script src="./task5.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="mainDiv">
+    <!-- HTML tag: Image -->
+    <img src="sunset.jpg" alt="Sunset">
+
+    <div class="mainContent">
+      <div class="column">
+        <h1 style="color:pink;">Week 1 HTML page</h1>
+        <p>This is a HTML page created in the first week, it covers task 1, 2 and 3</p>
+
+        <!-- HTML tag: Link -->
+        <br><a href="https://www.youtube.com">Search on here to learn more about Website development</a>
+
+        <!-- HTML tag: Form -->
+        <br><br><br>
+        <form>
+          <label for="name">Full name:</label><br>
+          <input type="text" id="name" name="name"><br>
+          <label for="num">Phone Number:</label><br>
+          <input type="number" id="num" name="num"><br>
+          <label for="postcode">Postcode:</label><br>
+          <input type="number" id="postcode" name="postcode">
+        </form>
+
+        <!-- HTML tag: Table -->
+        <br>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Contact Number</th>
+            <th>Postcode</th>
+          </tr>
+          <tr>
+            <td>Jerry Walker</td>
+            <td>000</td>
+            <td>3000</td>
+          </tr>
+          <tr>
+            <td>Florence Le</td>
+            <td>911</td>
+            <td>2043</td>
+          </tr>
+          <tr>
+            <td>Saru Sethi</td>
+            <td>04 387 678</td>
+            <td>3877</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- HTML tag: Sound -->
+      <br>
+      <div class="column">
+        <div class="audio">
+          <audio controls>
+            <source src="mouse_click.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <!-- Task 3 -->
+        <br>
+        <button onclick="getDate()"> Get today's date </button>
+        <p id="date"></p>
+
+        <button onclick="greetUser()"> Click me for a greeting </button>
+        <p id="greeting" style="display:none"> Welcome to the site!</p>
+
+        <!-- Task 5 Why not working? and is it? -->
+        <br> <br> <br>
+        <div id="app">
+          <div v-for="todo in todos" :key="todo.title" :style="{textDecoration: todo.checked? 'line-through':'none'}">
+            <input type="checkbox" v-model="todo.checked" />
+            {{todo.title}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
