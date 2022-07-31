@@ -6,11 +6,11 @@ body {
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  height: 199.67%; /* 1200px / 601px  =  199.67% */
-  width: 54.69%; /* 700px / 1280px =  54.69% */
-  padding-left: 3.91%; /* 50px / 1280px =  3.91% */
+  height: 199.67%; /* 1200px / 601px * 100  =  199.67% */
+  width: 54.69%; /* 700px / 1280px * 100 =  54.69% */
+  padding-left: 3.91%; /* 50px / 1280px * 100 =  3.91% */
 } 
 
 .mainContent{
-  padding-left: 10.16%; /* 130px / 1280px =   */
+  padding-left: 10.16%; /* 130px / 1280px * 100 =   */
 }
