@@ -15,31 +15,60 @@
 
  /* Setting the color of the page link which the site is currently on */
  .navbar a.active {
+  /* set color of selection box*/
    background-color: #5c9bcf;
-   /* set color of selection box*/
+  /* set color of text*/
    color: white;
-   /* set color of text*/
  }
 
  /* When mouse hovers on link, change color */
  .navbar a:hover {
+  /* set color of selection box*/
    background-color: #d2e1ef;
-   /* set color of selection box*/
-   color: black;
    /* set color of text*/
+   color: black;
  }
+  
+ /* set the attributes of the animated line under the nav bar*/
+    .navbarline {
+        width: 1px;
+        height: 2px;
+        background:#194F77;
+        position: absolute;
+        top: 538px;
+        left: 8px;
+
+        animation: increase 4s; 
+        animation-fill-mode: forwards;
+    }
+  
+    @keyframes increase {
+      100% {
+          width: 800px;
+      }
+  }
   /* Navigation Bar End */
 
   /* Page Set up */
  .page-title {
    position: absolute;
-   top: 16.63%;
+   color:#194F77;
    /*100px/601px*100*/
-   right: 15.63%;
+   top: 16.63%;
    /*200px/1280px*100*/
+   right: 15.63%; 
    font-size: 60px;
+   animation-name: color-change;
+   animation-duration: 6s;
+   animation-iteration-count: 1;
+   --color-1: #82A7D0;
+   --color-2: #194F77;
  }
 
+ @keyframes color-change {
+  0%    {color: var(--color-1)}
+  100%  {color: var(--color-2)}
+}
  p.title {
    font-size: 25px;
    color: #140661;
@@ -54,6 +83,10 @@
 .post-container {
   float: left;
   width: 33.33%;
-  padding: 10px;
+  padding: 0.78%;
+}
+
+p{
+  color: #194F77;
 }
    /* Page Set end */
