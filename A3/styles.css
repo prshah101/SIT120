@@ -35,8 +35,8 @@
         height: 2px;
         background:#194F77;
         position: absolute;
-        top: 538px;
-        left: 8px;
+        top: 89.52%;
+        left: 0.625%;
 
         animation: increase 4s; 
         animation-fill-mode: forwards;
@@ -80,7 +80,7 @@
 }
 
  /* Setting the dimensions of the containers  */
-.post-container {
+.posts-container {
   float: left;
   width: 33.33%;
   padding: 0.78%;
