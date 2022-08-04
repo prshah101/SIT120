@@ -7,7 +7,7 @@
  /* Style the links inside the navigation bar */
  .navbar a {
    float: left;
-   color: #140661;
+   color: #194F77;
    font-size: 19px;
    text-decoration: none;
    padding: 20px 20px;
@@ -16,7 +16,7 @@
  /* Setting the color of the page link which the site is currently on */
  .navbar a.active {
   /* set color of selection box*/
-   background-color: #5c9bcf;
+   background-color: #82A7D0;
   /* set color of text*/
    color: white;
  }
@@ -26,7 +26,7 @@
   /* set color of selection box*/
    background-color: #d2e1ef;
    /* set color of text*/
-   color: black;
+   color: #194F77;
  }
   
  /* set the attributes of the animated line under the nav bar*/
@@ -49,7 +49,7 @@
   }
   /* Navigation Bar End */
 
-  /* Page Set up */
+  /* Page Set Up*/
  .page-title {
    position: absolute;
    color:#194F77;
@@ -71,10 +71,10 @@
 }
  p.title {
    font-size: 25px;
-   color: #140661;
+   color: #194F77;
  }
 
- /* To ensure the post container doesn't break  */
+ /* To ensure the posts container doesn't break  */
  * {
   box-sizing: border-box;
 }
@@ -84,10 +84,11 @@
   float: left;
   width: 33.33%;
   padding: 0.78%;
+  background-color: #ffffff;
 }
 
 p{
   color: #194F77;
   font-size: 18px;
 }
-   /* Page Set end */
+   /* Page Set Up end */
