@@ -5,8 +5,11 @@
 <style>
 p {color: blueviolet;}
 </style>
+
+<!-- Linking External Vue 2 --->
+<script src = "https://unpkg.com/vue@2"> </script>
 <script src = "./task3.js"></script>
-<script src = "./task5.js"></script>
+
 </head>
 <body>
 
@@ -71,8 +74,9 @@ p {color: blueviolet;}
 <button onclick = "greetUser()"> Click me for a greeting </button>
 <p id = "greeting" style="display:none"> Welcome to the site!</p>
 
-<!-- Task 5 Why not working? and is it? --> 
+<!-- Task 5 --> 
 <br> <br> <br>
+<p>To Do List</p>
 <div id = "app">
   <div v-for = "todo in todos" 
   :key = "todo.title"
@@ -81,6 +85,19 @@ p {color: blueviolet;}
     {{todo.title}}
   </div>
 </div>
+
+<script>
+  let vue = new Vue({
+  el: '#app',
+  data : {
+      todos: [
+          {title: 'Assignment 1', checked: true},
+          {title: 'Assignment 2', checked: true},
+          {title: 'Assignment 3', checked: true},
+      ],
+  },
+});
+</script>
 
 </div>
 </div>
