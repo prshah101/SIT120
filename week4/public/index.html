@@ -4,28 +4,53 @@
 <head>
   <title>My first Vue app</title>
   <script src="https://unpkg.com/vue@2"></script>
+
+  <style>
+    .flex-box {
+      display: flex;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .flex-box>div {
+      background-color: #79cee6;
+      font-size: 4vw;
+      margin: 20px;
+      padding: 50px;
+    }
+  </style>
 </head>
 
 <body>
   <div id="app">
     {{ message }}
+
+    <p v-if="exist"> Vue is awesome!</p>
+    <p v-else>Vue is not awesome!</p>
+    <p v-show="symbol">:)</p>
+
+    <li v-for="item in nameList">
+      {{ item.name }}
+    </li>
   </div>
 
-  <h1 v-if="app">Vue is awesome!</h1>
-  <h1 v-else>Oh no 😢</h1>
+  <br> <br>
+  <div class="flex-box">
+    <div>Queen</div>
+    <div>King</div>
+    <div>Joker</div>
+  </div>
 
   <script>
     var app = new Vue({
       el: '#app',
       data: {
         message: 'Hello World, this is Vue!',
+        exist: false,
+        symbol: true,
+        nameList: [{ name: 'Jerry' }, { name: 'Tom' }]
       }
     })
-
-    // const show = ref(false);
   </script>
-  <!-- <h1 v-show="show">Now you see me</h1>
-  <button @click=  "show = !show"> Toggle </button>  -->
 </body>
 
 </html>
