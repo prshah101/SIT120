@@ -11,9 +11,6 @@
     {{ message }}
   </div>
 
-  <h1 v-if="app">Vue is awesome!</h1>
-  <h1 v-else>Oh no 😢</h1>
-
   <script>
     var app = new Vue({
       el: '#app',
@@ -21,11 +18,7 @@
         message: 'Hello World, this is Vue!',
       }
     })
-
-    // const show = ref(false);
   </script>
-  <!-- <h1 v-show="show">Now you see me</h1>
-  <button @click=  "show = !show"> Toggle </button>  -->
 </body>
 
 </html>
