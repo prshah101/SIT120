@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <script src="https://unpkg.com/vue@2"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ol>
+            <todo-item> </todo-item>
+        </ol>
+    </div>
+
+    <!-- <div id="checkbox">
+        <p> Original message: "{{message}}"</p>
+        <p> Reversed message: "{{reversedMessage}}"</p>
+    </div> -->
+
+    <!-- <input type="checkbox" id="checkbox" v-model="checked">
+<label for="checkbox">{{ checked }}</label> -->
+<!-- 
+    <script src>"index.js"</script> -->
+
+    <script>
+    Vue.component('todo-item', {
+        template: '<li>This is a todo</li>'
+    })
+    
+    var app = new Vue({
+        el: '#app'
+    })
+    </script>
+</body>
+
+</html>
