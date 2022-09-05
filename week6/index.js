@@ -3,8 +3,14 @@ Vue.component('todo-item', {
 })
 
 var app = new Vue({
-    el: '#app'
-})
+    el: '#app',
+    data: {
+        message: 'Hello Vue!',
+        name: 'Preet',
+        phoneNum: '0430085916',
+        checked: false,
+    },
+});
 
 // var checkbox = new Vue({
 //     el: '#app'

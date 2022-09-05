@@ -2,36 +2,30 @@
 <html lang="en">
 
 <head>
-    <!-- <script src = "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <script src="https://unpkg.com/vue@2"></script>
 </head>
 
 <body>
-    <div id="app">
-        <ol>
-            <todo-item> </todo-item>
-        </ol>
+    <div id = "app">
+        <p>Name</p>
+        <input v-model= "name" type="text" placeholder = "Please enter your full name" />
+        <p>Phone Number</p>
+        <input v-model= "phoneNum" type="tel" placeholder = "Please enter your phone number" />
+  
+        <div></div>
+        <div></div>
+        <h3>To-Do</h3>
+        <input type = "checkbox" id="checkbox" v-model = "checked" />
+    <label for = "checkbox"> {{ checked}} </label><div></div>
+    <input type = "checkbox" id = "task1" value= "Go shopping" v-model="checkedNames" />
+    <label for = "Go shopping">Go shopping</label> <div></div>
+    <input type = "checkbox" id = "task2" value= "Cook dinner" v-model="checkedNames" />
+    <label for = "Cook dinner">Cook dinner</label> <div></div>
+    <input type = "checkbox" id = "task3" value= "Prepare desert" v-model="checkedNames" />
+    <label for = "Prepare desert">Prepare desert</label> <div></div>
     </div>
 
-    <!-- <div id="checkbox">
-        <p> Original message: "{{message}}"</p>
-        <p> Reversed message: "{{reversedMessage}}"</p>
-    </div> -->
-
-    <!-- <input type="checkbox" id="checkbox" v-model="checked">
-<label for="checkbox">{{ checked }}</label> -->
-
     <script src="index.js"></script>
-
-    <!-- <script>
-    Vue.component('todo-item', {
-        template: '<li>This is a todo</li>'
-    })
-    
-    var app = new Vue({
-        el: '#app'
-    })
-    </script> -->
 </body>
 
 </html>
