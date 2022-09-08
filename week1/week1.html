@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles.css">
+<!-- Task 2 --> <link rel="stylesheet" href="styles.css">
 <style>
 p {color: blueviolet;}
 </style>
@@ -13,18 +13,19 @@ p {color: blueviolet;}
 </head>
 <body>
 
+<!-- Task 1 -->
 <div class = "mainDiv">
-<!-- HTML tag: Image -->
+<!-- HTML tag used: Image -->
 <img src="sunset.jpg" alt="Sunset">
 
 <div class = "mainContent">
 <h1 style = "color:pink;">Week 1 HTML page</h1>
 <p>This is a HTML page created in the first week, it covers task 1, 2 and 3</p>
 
-<!-- HTML tag: Link -->
+<!-- HTML tag used: Link -->
 <br><a href="https://www.youtube.com">Search on here to learn more about Website development</a>
 
-<!-- HTML tag: Form -->
+<!-- HTML tag used: Form -->
 <br><br><br>
 <form>
     <label for="name">Full name:</label><br>
@@ -35,7 +36,7 @@ p {color: blueviolet;}
     <input type="number" id="postcode" name="postcode">
 </form>
 
-<!-- HTML tag: Table -->
+<!-- HTML tag used: Table -->
 <br>
 <table>
     <tr>
@@ -60,11 +61,12 @@ p {color: blueviolet;}
     </tr>
 </table>
 
-<!-- HTML tag: Sound -->
+<!-- HTML tag used: Sound -->
 <br>
 <audio controls>
     <source src="mouse_click.mp3" type="audio/mpeg">
 </audio>
+<!-- Task 1 End -->
 
 <!-- Task 3 -->
 <br>
@@ -73,6 +75,7 @@ p {color: blueviolet;}
 
 <button onclick = "greetUser()"> Click me for a greeting </button>
 <p id = "greeting" style="display:none"> Welcome to the site!</p>
+<!-- Task 3 End -->
 
 <!-- Task 5 --> 
 <br> <br> <br>
@@ -85,19 +88,9 @@ p {color: blueviolet;}
     {{todo.title}}
   </div>
 </div>
+<script src="task5.js"></script>
 
-<script>
-  let vue = new Vue({
-  el: '#app',
-  data : {
-      todos: [
-          {title: 'Assignment 1', checked: true},
-          {title: 'Assignment 2', checked: true},
-          {title: 'Assignment 3', checked: true},
-      ],
-  },
-});
-</script>
+<!-- Task 5 End --> 
 
 </div>
 </div>
