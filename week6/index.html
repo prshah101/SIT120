@@ -6,23 +6,27 @@
 </head>
 
 <body>
-    <div id = "app">
+    <div id="app">
         <p>Name</p>
-        <input v-model= "name" type="text" placeholder = "Please enter your full name" />
+        <input v-model="name" type="text" placeholder="Please enter your full name" />
         <p>Phone Number</p>
-        <input v-model= "phoneNum" type="tel" placeholder = "Please enter your phone number" />
-  
+        <input v-model="phoneNum" type="tel" placeholder="Please enter your phone number" />
+
         <div></div>
         <div></div>
         <h3>To-Do</h3>
-        <input type = "checkbox" id="checkbox" v-model = "checked" />
-    <label for = "checkbox"> {{ checked}} </label><div></div>
-    <input type = "checkbox" id = "task1" value= "Go shopping" v-model="checkedNames" />
-    <label for = "Go shopping">Go shopping</label> <div></div>
-    <input type = "checkbox" id = "task2" value= "Cook dinner" v-model="checkedNames" />
-    <label for = "Cook dinner">Cook dinner</label> <div></div>
-    <input type = "checkbox" id = "task3" value= "Prepare desert" v-model="checkedNames" />
-    <label for = "Prepare desert">Prepare desert</label> <div></div>
+        <input type="checkbox" id="checkbox" v-model="checked" />
+        <label for="checkbox"> {{ checked}} </label>
+        <div></div>
+        <input type="checkbox" id="task1" value="Go shopping" v-model="checkedNames" />
+        <label for="Go shopping">Go shopping</label>
+        <div></div>
+        <input type="checkbox" id="task2" value="Cook dinner" v-model="checkedNames" />
+        <label for="Cook dinner">Cook dinner</label>
+        <div></div>
+        <input type="checkbox" id="task3" value="Prepare desert" v-model="checkedNames" />
+        <label for="Prepare desert">Prepare desert</label>
+        <div></div>
     </div>
 
     <script src="index.js"></script>

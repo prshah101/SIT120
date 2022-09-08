@@ -11,7 +11,3 @@ var app = new Vue({
         checked: false,
     },
 });
-
-// var checkbox = new Vue({
-//     el: '#app'
-// })
