@@ -9,5 +9,7 @@ var app = new Vue({
         name: 'Preet',
         phoneNum: '0430085916',
         checked: false,
+        checkedTasks: [],
+        select: "" ,
     },
 });
