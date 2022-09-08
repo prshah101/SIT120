@@ -4,20 +4,6 @@
 <head>
   <title>My first Vue app</title>
   <script src="https://unpkg.com/vue@2"></script>
-
-  <style>
-    .flex-box {
-      display: flex;
-      background-color: rgb(255, 255, 255);
-    }
-
-    .flex-box>div {
-      background-color: #79cee6;
-      font-size: 4vw;
-      margin: 20px;
-      padding: 50px;
-    }
-  </style>
 </head>
 
 <body>
@@ -31,13 +17,6 @@
     <li v-for="item in nameList">
       {{ item.name }}
     </li>
-  </div>
-
-  <br> <br>
-  <div class="flex-box">
-    <div>Queen</div>
-    <div>King</div>
-    <div>Joker</div>
   </div>
 
   <script>
