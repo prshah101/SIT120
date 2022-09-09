@@ -15,48 +15,30 @@
 
  /* Setting the color of the page link which the site is currently on */
  .navbar a.active {
-  /* set color of selection box*/
+   /* set color of selection box*/
    background-color: #82A7D0;
-  /* set color of text*/
+   /* set color of text*/
    color: white;
  }
 
  /* When mouse hovers on link, change color */
  .navbar a:hover {
-  /* set color of selection box*/
+   /* set color of selection box*/
    background-color: #d2e1ef;
    /* set color of text*/
    color: #194F77;
  }
-  
- /* set the attributes of the animated line under the nav bar*/
-    .navbarline {
-        width: 1px;
-        height: 2px;
-        background:#194F77;
-        position: absolute;
-        top: 89.52%;
-        left: 0.625%;
 
-        animation: increase 4s; 
-        animation-fill-mode: forwards;
-    }
-  
-    @keyframes increase {
-      100% {
-          width: 800px;
-      }
-  }
-  /* Navigation Bar End */
+ /* Navigation Bar End */
 
-  /* Page Set Up*/
+ /* Page Set Up*/
  .page-title {
    position: absolute;
-   color:#194F77;
+   color: #194F77;
    /*100px/601px*100*/
    top: 16.63%;
    /*200px/1280px*100*/
-   right: 15.63%; 
+   right: 15.63%;
    font-size: 60px;
    animation-name: color-change;
    animation-duration: 6s;
@@ -65,10 +47,22 @@
    --color-2: #194F77;
  }
 
+ .subPage-title {
+   font-size: 60px;
+   color: #194F77;
+   text-align: center;
+ }
+
  @keyframes color-change {
-  0%    {color: var(--color-1)}
-  100%  {color: var(--color-2)}
-}
+   0% {
+     color: var(--color-1)
+   }
+
+   100% {
+     color: var(--color-2)
+   }
+ }
+
  p.title {
    font-size: 25px;
    color: #194F77;
@@ -76,19 +70,20 @@
 
  /* To ensure the posts container doesn't break  */
  * {
-  box-sizing: border-box;
-}
+   box-sizing: border-box;
+ }
 
  /* Setting the dimensions of the containers  */
-.posts-container {
-  float: left;
-  width: 33.33%;
-  padding: 0.78%;
-  background-color: #ffffff;
-}
+ .posts-container {
+   float: left;
+   width: 33.33%;
+   padding: 0.78%;
+   background-color: #ffffff;
+ }
 
-p{
-  color: #194F77;
-  font-size: 18px;
-}
-   /* Page Set Up end */
+ p {
+   color: #194F77;
+   font-size: 18px;
+ }
+
+ /* Page Set Up end */

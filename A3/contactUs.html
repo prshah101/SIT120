@@ -14,7 +14,7 @@
             height: 2px;
             background: #194F77;
             position: absolute;
-            top: 89.52%;
+            top: 22.88%;
             left: 0.625%;
 
             animation: increase 4s;
@@ -30,34 +30,37 @@
 </head>
 
 <body>
-    <img src="images/purpose.jpg" style="width:100%;">
-    <div class="page-title">Self Improvement</div>
+
+    <div class="subPage-title">Self Improvement</div>
     <header>
         <div class="navbar">
-            <a class="active" href="index.html">Home</a>
+            <a href="#index">Home</a>
             <a href="#allposts">All Posts</a>
-            <a href="#contact">Contact Us</a>
+            <a class="active" href="contactUs.html">Contact Us</a>
         </div>
         <div class="navbarline"></div>
     </header>
 
     <br><br><br><br><br>
-    <p class="title">Latest Posts</p>
-
     <div id="app">
-        <div class="posts-container">
-            <img src="images/habit.jpg" alt="habit" style="width:100%">
-            <p v-if="exist">How to Build Habit</p>
-        </div>
-        <div class="posts-container">
-            <img src="images/motivation.png" alt="motivation" style="width:100%">
-            <p v-if="exist">Gaining Motivation</p>
-        </div>
-        <div class="posts-container">
-            <img src="images/goals.jpg" alt="goals" style="width:100%">
-            <p v-if="exist">Stick to your Goals</p>
-        </div>
+        <b>
+            <p>Full Name</p>
+        </b>
+        <input v-model="name" type="text" placeholder="Please enter your full name" />
+        <b>
+            <p>Phone Number</p>
+        </b>
+        <input v-model="phoneNum" type="tel" placeholder="Please enter your phone number" />
+        <b>
+            <p>Enquiry Details</p>
+        </b>
+        <textarea v-model="enquiry" placeholder="Enter your enquiry details"></textarea>
+
+        <br>
+        <button onclick="confirm()">Submit</button>
+        <p id="confirmMessage" style="display:none"> {{name}}, your enquiry has been sent!</p>
     </div>
+
     <script src="index.js"></script>
 </body>
 
