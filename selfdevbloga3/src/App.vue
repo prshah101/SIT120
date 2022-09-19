@@ -1,20 +1,17 @@
 <template>
-  <!-- <router-link to = "/home"> Home</router-link>
-  <router-link to = "/allposts"> All Posts</router-link>
-  <router-link to = "/contactUs"> Contact Us</router-link>
-  <router-view></router-view> -->
-  <HomeView/>
+  <HeaderView title="Title"/>
+  <NavBar/>
 </template>
 
 <script>
-import HomeView from './HomeView.vue'
+import NavBar from './components/NavBar.vue'
+import HeaderView from './components/HeaderView.vue'
+
 export default {
   name: 'App',
   components: {
-    HomeView,
+    NavBar,
+    HeaderView,
   }
 }
 </script>
-
-<style>
-</style>
