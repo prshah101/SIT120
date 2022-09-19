@@ -2,10 +2,12 @@
  /* Sets the background color of the navigation bar*/
  .navbar {
    background-color: white;
+   overflow: hidden;
  }
 
  /* Style the links inside the navigation bar */
  .navbar a {
+  display: block;
    float: left;
    color: #194F77;
    font-size: 19px;
@@ -28,6 +30,11 @@
    /* set color of text*/
    color: #194F77;
  }
+
+ /* Hide the link that should open and close the navbar on small screens */
+ .navbar .icon {
+  display: none;
+}
 
  /* Navigation Bar End */
 
