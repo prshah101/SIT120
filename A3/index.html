@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/vue@2"></script>
+    <script src="https://unpkg.com/vue-router@2.7.0/dist/vue-router.js"></script>
     <style>
         /* set the attributes of the animated line under the nav bar*/
         .navbarline {
@@ -45,6 +46,14 @@
     <p class="title">Latest Posts</p>
 
     <div id="app">
+        <!-- Router -->
+        <nav>
+            <router-link to="/">Home</router-link>
+              <router-link to="/contactUs">Contact Us</router-link>
+          </nav>
+          <router-view></router-view>
+        <!-- Router End -->
+        
         <div class="posts-container">
             <img src="images/habit.jpg" alt="habit" style="width:100%">
             <p v-if="exist">How to Build Habit</p>
