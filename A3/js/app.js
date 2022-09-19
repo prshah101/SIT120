@@ -1,6 +1,10 @@
 //Global Component
 Vue.component('contact', {
-    template: '<div>email: equiries@selfdev.com,  number: 300 453 234</div>',
+    template: '<div><p>email: equiries@selfdev.com,  number: 300 453 234</p></div>',
+});
+
+Vue.component('currentBlogs', {
+    template: '<div><p>Blog1</p></div>',
 });
 
 var app = new Vue({
@@ -10,6 +14,7 @@ var app = new Vue({
         name: '',
         phoneNum: '',
         enquiry: '',
+        items: [{ message: 'Foo' }, { message: 'Bar' }],
     },
 });
 
