@@ -1,20 +1,20 @@
 <template>
-    <p>{{ message }}</p>
-</template>
-
-<script>
-module.exports = {
-    data: function(){
-        return{
-            message: "test 123"
-        };
+    <p>{{ greeting }} World!</p>
+  </template>
+  
+  <script>
+  module.exports = {
+    data: function() {
+      return {
+        greeting: "Hello"
+      };
     }
-};
-</script>
-
-<!-- <style scoped>
-    p {
-        font-size: 2em;
-        text-align: center;
-    }
-</style> -->
+  };
+  </script>
+  
+  <style scoped>
+  p {
+    font-size: 2em;
+    text-align: center;
+  }
+  </style>
