@@ -62,4 +62,9 @@ input[type=text] {
 .querycolored {
     background-color: #194F77;
 }
+
+input{
+    border: none;
+    font-size: 30vw;
+}
 </style>
