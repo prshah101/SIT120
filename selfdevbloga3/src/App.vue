@@ -17,12 +17,4 @@ export default {
     HeaderView,
   }
 }
-
-// data: {
-//         exist: true,
-//         name: '',
-//         phoneNum: '',
-//         enquiry: '',
-//         items: [{ message: 'Foo' }, { message: 'Bar' }],
-//     },
 </script>

@@ -12,29 +12,14 @@
     </div>
 </div>
 
-<br>
-<div v-for="blog in blogs" :key="blog.id">
-    <div class="posts">
-        {{ blog.message }}
-    </div>    
-    <br>
-</div>
+<!-- <li v-for="item in items">
+        {{ item.message }}
+</li> -->
 </template>
     
 <script>
     // list, filter, query, for..loop matched results
-export default {
-    name: 'AllPosts',
-    data() {
-        return {
-            blogs: [
-                { id: 1, message:"How to Build Habit", url: "/blogPost/Habits"}, 
-                { id: 2, message:"Gaining Motivation", url: "/blogPost/Motivation" },
-                { id: 3, message:"Stick to Your Goals", url: "/blogPost/Goals"}
-            ],
-        }
-    },
-}
+
 </script>
 
     
@@ -83,13 +68,5 @@ input[type=text] {
 input{
     border: none;
     font-size: 30vw;
-}
-
-.posts{
-    position: relative;
-    width: 90vw;
-    padding: 0.78%;
-    background-color: #D2E1Ef;
-    left: 3vw;
 }
 </style>
