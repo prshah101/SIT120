@@ -5,7 +5,6 @@
 </div>
 <div v-else>
     <div class="subPage-title"> {{title}} </div>
-    <p>It's {{this.$route.path}}</p>
 </div>
 </template>
 
@@ -19,7 +18,8 @@ export default {
         }
     },
     props:{
-    title: String
+    title: String,
+    // homepage: Boolean
   }
 }
 </script>
