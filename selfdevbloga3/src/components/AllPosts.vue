@@ -14,7 +14,9 @@
 <br>
 <div v-for="blog in blogs" v-bind:key="blog.id">
     <div class="posts">
+        <router-link :to="`/blogPost/${blog.name}`">
         {{ blog.message }}
+        </router-link>
     </div>
     <br>
 </div>
@@ -28,15 +30,18 @@ export default {
         return {
             blogs: [{
                     id: 1,
-                    message: 'How to Build a Habit'
+                    message: 'How to Build a Habit',
+                    name: 'Habits'
                 },
                 {
                     id: 2,
-                    message: 'Gaining Motivation'
+                    message: 'Gaining Motivation',
+                    name: 'Motivation'
                 },
                 {
                     id: 3,
-                    message: 'Stick to your Goals'
+                    message: 'Stick to your Goals',
+                    name: 'Goals'
                 }
             ],
         }
@@ -99,5 +104,9 @@ input {
     width: 90vw;
     position: relative;
     left: 3vw;
+}
+
+.posts a {
+  text-decoration: none;
 }
 </style>
