@@ -46,7 +46,7 @@ export default {
             ],
         }
     },
-    props: {}
+    blogquery: ''
 }
 </script>
 
@@ -108,5 +108,6 @@ input {
 
 .posts a {
   text-decoration: none;
+  color: #194F77;
 }
 </style>
