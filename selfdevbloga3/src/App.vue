@@ -1,6 +1,7 @@
 <template>
 
  <HeaderView/>
+ <br>
  <NavBar/>
 
 </template>

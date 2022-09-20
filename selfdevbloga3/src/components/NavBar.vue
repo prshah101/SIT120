@@ -1,5 +1,5 @@
 <template>
-<div class="topnav" id="myTopnav">
+<div class="navigationBar" id="navigationBarID">
     <router-link to="/"> Home</router-link>
     <router-link to="/allPosts"> All Posts</router-link>
     <router-link to="/contactUs"> Contact Us</router-link>
@@ -15,11 +15,11 @@ export default {
     name: 'NavBar',
     methods: {
         myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
+            var x = document.getElementById("navigationBarID");
+            if (x.className === "navigationBar") {
                 x.className += " responsive";
             } else {
-                x.className = "topnav";
+                x.className = "navigationBar";
             }
         }
     }
@@ -27,50 +27,56 @@ export default {
 </script>
 
 <style scoped>
-.topnav {
+.navigationBar {
   overflow: hidden;
   background-color: #ffff;
+  font-size: 2vw;
 }
 
-.topnav a {
+.navigationBar a {
   float: left;
   display: block;
   color: #193F77;
   text-align: center;
   padding: 1vw 1vw;
   text-decoration: none;
-  font-size: 2vw;
 }
 
-.topnav a:hover {
+.navigationBar a:hover {
   background-color: #ddd;
 }
 
-.topnav a.active {
+.navigationBar a.active {
   background-color: #193F77;
   color: white;
 }
 
-.topnav .icon {
+.navigationBar .icon {
   display: none;
+  height: 50px;
+  width: 50px;
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
+  .navigationBar a {display: none;}
+  .navigationBar a.icon {
     float: right;
     display: block;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
+  .navigationBar.responsive {
+    position: relative;
+    font-size: 4vw;
+    background-color: #D2E1Ef;
+  }
+  .navigationBar.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .topnav.responsive a {
+  .navigationBar.responsive a {
     float: none;
     display: block;
     text-align: left;

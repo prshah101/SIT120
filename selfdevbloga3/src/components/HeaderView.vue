@@ -44,9 +44,10 @@ export default {
 }
 
 .subPage-title {
-    font-size: 7vw;
+    font-size: 6vw;
     color: #194F77;
     text-align: center;
+    padding: 3vw;
     background-color: #D2E1EF;
 }
 
@@ -56,7 +57,7 @@ export default {
     height: 2px;
     background: #194F77;
     position: absolute;
-    top: 89.52%;
+    top: 90.90%;
     left: 0.625%;
 
     animation: increase 4s;
