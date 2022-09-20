@@ -8,21 +8,43 @@
             <input v-model.trim="blogquery" type="text" placeholder="Search" />
         </div>
 
-        
     </div>
 </div>
 
-<!-- <li v-for="item in items">
-        {{ item.message }}
-</li> -->
+<br>
+<div v-for="blog in blogs" v-bind:key="blog.id">
+    <div class="posts">
+        {{ blog.message }}
+    </div>
+    <br>
+</div>
 </template>
-    
-<script>
-    // list, filter, query, for..loop matched results
 
+<script>
+// list, filter, query, for..loop matched results
+export default {
+    name: 'AllPosts',
+    data() {
+        return {
+            blogs: [{
+                    id: 1,
+                    message: 'How to Build a Habit'
+                },
+                {
+                    id: 2,
+                    message: 'Gaining Motivation'
+                },
+                {
+                    id: 3,
+                    message: 'Stick to your Goals'
+                }
+            ],
+        }
+    },
+    props: {}
+}
 </script>
 
-    
 <style scoped>
 .container {
     width: 100px;
@@ -65,8 +87,17 @@ input[type=text] {
     background-color: #194F77;
 }
 
-input{
+input {
     border: none;
     font-size: 30vw;
+}
+
+.posts {
+    background-color: #D2E1EF;
+    padding: 2vw;
+    font-size: 2vw;
+    width: 90vw;
+    position: relative;
+    left: 3vw;
 }
 </style>
