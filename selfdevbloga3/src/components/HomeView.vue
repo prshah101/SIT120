@@ -1,5 +1,5 @@
 <template>
-<br><br><br><br><br>
+<br><br>
 <p class="title">Latest Posts</p>
 <div class="posts-container">
     <img src="@/assets/habit.jpg" alt="habit" style="width:100%">
@@ -23,10 +23,26 @@ export default {
 </script>
 
 <style scoped>
+
+ /* To ensure the posts container doesn't break  */
+ * {
+   box-sizing: border-box;
+ }
+
 .posts-container {
     float: left;
     width: 33.33%;
     padding: 0.78%;
     background-color: #ffffff;
 }
+
+.title{
+    font-size: 25px;
+   color: #194F77;
+}
+
+p {
+   color: #194F77;
+   font-size: 18px;
+ }
 </style>
