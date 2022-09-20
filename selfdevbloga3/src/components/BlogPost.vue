@@ -10,7 +10,6 @@ export default {
     data() {
         return {
             title:'',
-            body:'',
         }
     },
     mounted(){
@@ -18,10 +17,6 @@ export default {
         console.warn("route", route.params.title);
         this.title=route.params.title;
     },
-    methods: {
-        findTitle() {
-        }
-    }
 }
 </script>
 
