@@ -5,14 +5,15 @@
             <img src="@/assets/searchglass.jpg" alt="searchglass">
         </div>
         <div class="query">
-            <input v-model.trim="blogquery" type="text" placeholder="Search" />
+            <input v-model="blogquery" type="text" placeholder="Search" />
         </div>
 
     </div>
 </div>
 
 <br>
-<div v-for="blog in blogs" v-bind:key="blog.id">
+
+<div v-for="blog in filteredList()" :key="blog.id">
     <div class="posts">
         <router-link :to="`/blogPost/${blog.name}`">
         {{ blog.message }}
@@ -20,15 +21,16 @@
     </div>
     <br>
 </div>
+<div class="item error" v-if="blogquery&&!filteredList().length">
+    <p>No results found!</p>
+ </div>
 </template>
 
-<script>
-// list, filter, query, for..loop matched results
-export default {
-    name: 'AllPosts',
-    data() {
-        return {
-            blogs: [{
+<!-- // list, filter, query, for..loop matched results -->
+<script setup>
+    import { ref } from "vue";
+    let blogquery = ref("");
+    const blogs= [{
                     id: 1,
                     message: 'How to Build a Habit',
                     name: 'Habits'
@@ -43,12 +45,13 @@ export default {
                     message: 'Stick to your Goals',
                     name: 'Goals'
                 }
-            ],
-        }
-    },
-    blogquery: ''
-}
-</script>
+            ];
+    function filteredList() {
+      return blogs.filter((blog) =>
+        blog.message.toLowerCase().includes(blogquery.value.toLowerCase())
+      );
+    }
+    </script>
 
 <style scoped>
 .container {
