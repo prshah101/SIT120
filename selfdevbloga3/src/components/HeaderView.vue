@@ -26,10 +26,10 @@ export default {
    position: absolute;
    color: #194F77;
    /*100px/601px*100*/
-   top: 16.63%;
+   top: 8.63%;
    /*200px/1280px*100*/
    right: 15.63%;
-   font-size: 60px;
+   font-size: 6vw;
    animation-name: color-change;
    animation-duration: 6s;
    animation-iteration-count: 1;
