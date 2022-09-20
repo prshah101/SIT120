@@ -1,10 +1,10 @@
 <template>
-<div v-if="homepage">
+<div v-if="$route.meta.homepage">
     <img src="@/assets/purpose.jpg" alt="" style="width:100%;">
     <div class="page-title">Self Improvement</div>
 </div>
 <div v-else>
-    <div class="subPage-title"> {{title}} </div>
+    <div class="subPage-title"> {{ $route.meta.heading }} </div>
 </div>
 </template>
 
@@ -14,12 +14,9 @@ export default {
     data() 
     {
         return {
-            homepage: false,
         }
     },
     props:{
-    title: String,
-    // homepage: Boolean
   }
 }
 </script>

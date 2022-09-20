@@ -1,6 +1,5 @@
 <template>
     <br>
-<h1>Contact Us</h1>
 
 <div class="enquiry-forum">
         <b>

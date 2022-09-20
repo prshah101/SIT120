@@ -1,15 +1,6 @@
 <template>
 
-<!-- {{this.$route.path}}
-
-  <div v-if="$route.path === '/'">
-    <HeaderView title="Title" homepage="true"/>
-  </div>
-  <div v-else>
-    <HeaderView title="Title" homepage="false"/>
- </div> -->
-
- <HeaderView title="Title"/>
+ <HeaderView/>
  <NavBar/>
 
 </template>
@@ -23,6 +14,6 @@ export default {
   components: {
     NavBar,
     HeaderView,
-  },
+  }
 }
 </script>

@@ -8,16 +8,19 @@ const routes = [
         name: 'Home',
         path: '/',
         component: HomeView,
+        meta: { heading: 'Self Improvement' , homepage: true}
     },
     {
         name: 'All Posts',
         path: '/allPosts',
         component: AllPosts,
+        meta: { heading: 'All Posts'  , homepage: false}
     },
     {
         name: 'Contact Us',
         path: '/contactUs',
         component: ContactUs,
+        meta: { heading: 'Contact Us'  , homepage: false}
     }
 ]
 
