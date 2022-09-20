@@ -9,18 +9,15 @@
         </div>
     </div>
 </div>
+
+<!-- <li v-for="item in items">
+        {{ item.message }}
+</li> -->
 </template>
 
     
 <script>
-// import NavBar from './NavBar.vue'
 
-// export default{
-//     name:'HomeView',
-//     components:{
-//         NavBar
-//     }
-// }
 </script>
 
     
