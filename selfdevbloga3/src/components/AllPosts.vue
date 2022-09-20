@@ -7,6 +7,8 @@
         <div class="query">
             <input v-model.trim="blogquery" type="text" placeholder="Search" />
         </div>
+
+        
     </div>
 </div>
 
@@ -14,9 +16,9 @@
         {{ item.message }}
 </li> -->
 </template>
-
     
 <script>
+    // list, filter, query, for..loop matched results
 
 </script>
 

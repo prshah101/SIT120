@@ -1,18 +1,24 @@
 <template>
 <br><br>
 <p class="title">Latest Posts</p>
-<div class="posts-container">
-    <img src="@/assets/habit.jpg" alt="habit" style="width:100%">
-    <p>How to Build Habit</p>
-</div>
+<router-link to="/blogPost/Habits">
+    <div class="posts-container">
+        <img src="@/assets/habit.jpg" alt="habit" style="width:100%">
+        <p>How to Build Habit</p>
+    </div>
+</router-link>
+<router-link to="/blogPost/Motivation">
 <div class="posts-container">
     <img src="@/assets/motivation.png" alt="motivation" style="width:100%">
     <p>Gaining Motivation</p>
 </div>
+</router-link>
+<router-link to="/blogPost/Goals">
 <div class="posts-container">
     <img src="@/assets/goals.jpg" alt="goals" style="width:100%">
     <p>Stick to your Goals</p>
 </div>
+</router-link>
 </template>
 
 <script>
@@ -23,11 +29,10 @@ export default {
 </script>
 
 <style scoped>
-
- /* To ensure the posts container doesn't break  */
- * {
-   box-sizing: border-box;
- }
+/* To ensure the posts container doesn't break  */
+* {
+    box-sizing: border-box;
+}
 
 .posts-container {
     float: left;
@@ -36,13 +41,13 @@ export default {
     background-color: #ffffff;
 }
 
-.title{
-    font-size: 25px;
-   color: #194F77;
+.title {
+    font-size: 3vw;
+    color: #194F77;
 }
 
 p {
-   color: #194F77;
-   font-size: 18px;
- }
+    color: #194F77;
+    font-size: 1.5vw;
+}
 </style>

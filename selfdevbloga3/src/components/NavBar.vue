@@ -54,8 +54,6 @@ export default {
 
 .navigationBar .icon {
   display: none;
-  height: 50px;
-  width: 50px;
 }
 
 @media screen and (max-width: 600px) {
@@ -81,6 +79,10 @@ export default {
     float: none;
     display: block;
     text-align: left;
+  }
+
+  i{
+    font-size:7vw;
   }
 }
 </style>

@@ -2,6 +2,7 @@ import {createWebHistory, createRouter} from 'vue-router'
 import HomeView from './components/HomeView.vue';
 import AllPosts from './components/AllPosts.vue';
 import ContactUs from './components/ContactUs.vue';
+import BlogPost from './components/BlogPost.vue';
 
 const routes = [
     {
@@ -21,6 +22,12 @@ const routes = [
         path: '/contactUs',
         component: ContactUs,
         meta: { heading: 'Contact Us'  , homepage: false}
+    },
+    {
+        name: 'Blog Post',
+        path: '/blogPost/:title',
+        component: BlogPost,
+        meta: { heading: 'Blog Post'  , homepage: false}
     }
 ]
 

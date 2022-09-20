@@ -41,10 +41,10 @@
         <br>
 
         <br>
-        <button v-on:click="confirm">Submit</button>
-        <p id="confirmMessage" style="display:none; color:white"> {{form.name}}, your enquiry has been sent! We will get back to you shortly.</p>
-        <br><br><br>
     </form>
+    <button v-on:click="confirm">Submit</button>
+        <!-- <p id="confirmMessage" style="display:none; color:white"> {{form.name}}, your enquiry has been sent! We will get back to you shortly.</p> -->
+        <br><br><br>
 </div>
 </template>
 
