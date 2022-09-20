@@ -7,6 +7,7 @@
     <i class="fa fa-bars"></i>
     </a>
 </div>
+<router-view></router-view>
 </template>
 
 <script>

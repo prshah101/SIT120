@@ -2,6 +2,7 @@
 <div v-if="$route.meta.homepage">
     <img src="@/assets/purpose.jpg" alt="" style="width:100%;">
     <div class="page-title">Self Improvement</div>
+    <div class="navbarline"></div>
 </div>
 <div v-else>
     <div class="subPage-title"> {{ $route.meta.heading }} </div>
@@ -11,44 +12,68 @@
 <script>
 export default {
     name: 'HeaderView',
-    data() 
-    {
-        return {
-        }
+    data() {
+        return {}
     },
-    props:{
-  }
+    props: {}
 }
 </script>
 
 <style scoped>
- .page-title {
-   position: absolute;
-   color: #194F77;
-   top: 7.63%;
-   right: 15.63%;
-   font-size: 7vw;
-   animation-name: color-change;
-   animation-duration: 6s;
-   animation-iteration-count: 1;
-   --color-1: #82A7D0;
-   --color-2: #194F77;
- }
+.page-title {
+    position: absolute;
+    color: #194F77;
+    top: 7.63%;
+    right: 15.63%;
+    font-size: 7vw;
+    animation-name: color-change;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    --color-1: #82A7D0;
+    --color-2: #194F77;
+}
 
- @keyframes color-change {
-   0% {
-     color: var(--color-1)
-   }
+@keyframes color-change {
+    0% {
+        color: var(--color-1)
+    }
 
-   100% {
-     color: var(--color-2)
-   }
- }
+    100% {
+        color: var(--color-2)
+    }
+}
 
- .subPage-title {
-   font-size: 7vw;
-   color: #194F77;
-   text-align: center;
-   background-color: #D2E1EF;
- }
+.subPage-title {
+    font-size: 7vw;
+    color: #194F77;
+    text-align: center;
+    background-color: #D2E1EF;
+}
+
+/* Nav Bar Line */
+.navbarline {
+    width: 1px;
+    height: 2px;
+    background: #194F77;
+    position: absolute;
+    top: 89.52%;
+    left: 0.625%;
+
+    animation: increase 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        width: 62.5%;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .navbarline {
+        display: none;
+    }
+}
+
+/* Nav Bar Line End*/
 </style>
