@@ -3,7 +3,7 @@
     <router-link to="/"> Home</router-link>
     <router-link to="/allPosts"> All Posts</router-link>
     <router-link to="/contactUs"> Contact Us</router-link>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" v-on:click="myFunction()">
     <i class="fa fa-bars"></i>
     </a>
 </div>
@@ -14,7 +14,7 @@
 export default {
     name: 'NavBar',
     methods: {
-        myFunction: function () {
+        myFunction() {
             var x = document.getElementById("myTopnav");
             if (x.className === "topnav") {
                 x.className += " responsive";
