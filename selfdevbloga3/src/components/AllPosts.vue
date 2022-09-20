@@ -68,8 +68,8 @@
 }
 
 .query {
-    width: 500px;
-    height: 100px;
+    width: 39.063vw;
+    height: 7.889vw;
     color: white;
 }
 
@@ -81,7 +81,7 @@
 input[type=text] {
     background-color: #194F77;
     color: white;
-    font-size: 30px;
+    font-size: 32px;
 }
 
 .totalquery {
