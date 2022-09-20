@@ -25,11 +25,9 @@ export default {
  .page-title {
    position: absolute;
    color: #194F77;
-   /*100px/601px*100*/
-   top: 16.63%;
-   /*200px/1280px*100*/
+   top: 7.63%;
    right: 15.63%;
-   font-size: 60px;
+   font-size: 7vw;
    animation-name: color-change;
    animation-duration: 6s;
    animation-iteration-count: 1;
@@ -48,7 +46,7 @@ export default {
  }
 
  .subPage-title {
-   font-size: 60px;
+   font-size: 7vw;
    color: #194F77;
    text-align: center;
    background-color: #D2E1EF;
