@@ -9,7 +9,8 @@ export default {
     name: 'BlogPost',
     data() {
         return {
-            title:''
+            title:'',
+            body:'',
         }
     },
     mounted(){

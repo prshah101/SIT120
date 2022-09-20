@@ -17,33 +17,33 @@
             <p>self.improvement@sf.com.au</p>
         </div>
     </div>
-    <form class="forum">
+    <div class="forum">
         <h2>Contact Forum</h2>
         <div class="forum-detail">
             <label>Full Name:</label> &nbsp; &nbsp;
-            <input v-model="form.name" type="text" placeholder="Please enter your full name" />
+            <input v-model="name" type="text" placeholder="Please enter your full name" />
         </div>
         <br>
         <div class="forum-detail">
             <label>Phone Number:</label> &nbsp; &nbsp;
-            <input v-model="form.phoneNum" type="tel" placeholder="Please enter your phone number" />
+            <input v-model="phoneNum" type="tel" placeholder="Please enter your phone number" />
         </div>
         <br>
         <div class="forum-detail">
             <label>Email:</label> &nbsp; &nbsp;
-            <input v-model="form.email" type="text" placeholder="Please enter your email" />
+            <input v-model="email" type="text" placeholder="Please enter your email" />
         </div>
         <br>
         <div class="forum-detail">
             <label>Enquiry Details:</label> &nbsp; &nbsp;
-            <textarea v-model="form.enquiry" placeholder="Enter your enquiry details"></textarea>
+            <textarea v-model="enquiry" placeholder="Enter your enquiry details"></textarea>
         </div>
         <br>
 
+        <button v-on:click="confirm">Submit</button>
+        <p id="confirmMessage" style="display:none; color:white"> {{name}}, your enquiry has been sent! We will get back to you shortly.</p>
         <br>
-    </form>
-    <button v-on:click="confirm">Submit</button>
-        <!-- <p id="confirmMessage" style="display:none; color:white"> {{form.name}}, your enquiry has been sent! We will get back to you shortly.</p> -->
+    </div>
         <br><br><br>
 </div>
 </template>
@@ -53,12 +53,10 @@ export default {
     name: 'ContactUs',
     data() {
         return {
-            form: {
                 name: '',
                 phoneNum: '',
                 enquiry: '',
                 email: '',
-            }
         }
     },
     methods: {
@@ -111,17 +109,13 @@ export default {
     background-color: #ffffff;
     padding: 0.5vw;
     font-size: 2vw;
-    width: 35vw;
+    width: 33vw;
     position: relative;
     left: 7vw;
 }
 
-.h2 {
-    padding: 0.5vw;
-    font-size: 2vw;
-    width: 35vw;
-    position: relative;
-    left: 8vw;
+h2 {
+    color: #ffffff;
 }
 
 input {
