@@ -18,7 +18,6 @@
     <div class="posts-container">
         <BlogDetails/>
     </div>
-
 </router-link>
 
 </template>

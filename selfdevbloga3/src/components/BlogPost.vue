@@ -1,5 +1,4 @@
 <template>
-
     <div>
         <h1>{{title}}</h1>
         <img :src="require('@/assets/' + imageurl + '')" style="width:100%"/>

@@ -1,18 +1,15 @@
 <template>
-<div class="querycolored">
     <div class="totalquery">
-        <div class="container">
+        <div class="imagecontainer">
             <img src="@/assets/searchglass.jpg" alt="searchglass">
         </div>
-        <div>
+        <div class="inputcontainer" >
             <input v-model="blogquery" type="text" placeholder="Search" />
         </div>
     </div>
-</div>
 
 <br>
 
-<div class="totalposts">
     <div v-for="blog in filteredList()" :key="blog.id">
     <div class="posts">
         <router-link :to="`/blogPost/${blog.name}`">
@@ -20,15 +17,12 @@
         </router-link>
     </div>
     <br>
-</div>
 <div class="item error" v-if="blogquery&&!filteredList().length">
     <p>No results found!</p>
  </div>
 </div> 
 
 </template>
-
-<!-- // list, filter, query, for..loop matched results -->
 <script setup>
     import { ref } from "vue";
     let blogquery = ref("");
@@ -56,24 +50,23 @@
     </script>
 
 <style scoped>
-.container {
+.imagecontainer {
     width: auto;
     height: auto;
     float: left;
 }
 
-.container img {
-    width: 20%;
-    height: 20%;
+.imagecontainer img {
+    width: 10%;
+    height: 10%;
     float: left;
+    left:40vw;
+    position: relative;
 }
 
-.query {
-    width: 39.063vw;
-    height: 7.889vw;
-    color: white;
+.inputcontainer {
     position: relative;
-    float: right;
+    right:10vw;
 }
 
 ::placeholder {
@@ -84,18 +77,17 @@
 input[type=text] {
     background-color: #194F77;
     color: white;
-    font-size: 32px;
+    font-size: 40px;
 }
 
 .totalquery {
     margin: auto;
     text-align: center;
     width: 100%;
-    padding: 4vw;
     font-size: 50px;
     margin-bottom: 0.30em;
     background-color: #194F77;
-    padding: 10px;
+    padding: 3vw;
 }
 
 input {
@@ -105,9 +97,9 @@ input {
 
 .posts {
     background-color: #D2E1EF;
-    padding: 2vw;
-    font-size: 2vw;
-    width: 90vw;
+    padding: 3vw;
+    font-size: 2.75vw;
+    width: 85vw;
     position: relative;
     left: 3vw;
 }
@@ -117,7 +109,43 @@ input {
   color: #194F77;
 }
 
-.totalposts{
-    margin-top: 100px;
+@media screen and (max-width: 878px) {
+    .posts {
+    background-color: #D2E1EF;
+    padding: 4vw;
+    font-size: 5vw;
+    width: 85vw;
+    position: relative;
+    left: 2vw;
 }
+}
+
+@media screen and (max-width: 1184px) {
+    .inputcontainer {
+    position: relative;
+    left:10vw;
+}
+}
+
+@media screen and (max-width: 1007px) {
+    .inputcontainer {
+    position: relative;
+    left:15vw;
+}
+}
+
+@media screen and (max-width: 814px) {
+    .inputcontainer {
+    position: relative;
+    left:20vw;
+}
+}
+
+@media screen and (max-width: 544px) {
+    .inputcontainer {
+    position: relative;
+    left:30vw;
+}
+}
+
 </style>
