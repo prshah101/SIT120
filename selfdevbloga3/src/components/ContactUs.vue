@@ -40,15 +40,17 @@
         </div>
         <br>
 
-        <button v-on:click="confirm">Submit</button>
+        <SubmitButton  @submit-details="submitConfirmation"/>
+        <!-- <button v-on:click="confirm">Submit</button>
         <p id="confirmMessage" style="display:none; color:white"> {{name}}, your enquiry has been sent! We will get back to you shortly.</p>
-        <br>
+        <br> -->
     </div>
     <br><br><br>
 </div>
 </template>
 
 <script>
+import SubmitButton from './SubmitButton.vue'
 export default {
     name: 'ContactUs',
     data() {
@@ -62,7 +64,13 @@ export default {
     methods: {
         confirm() {
             document.getElementById('confirmMessage').style.display = 'block';
+        },
+        submitConfirmation(message){
+            alert(`${message}`);
         }
+    },
+    components:{
+        SubmitButton
     }
 }
 </script>
