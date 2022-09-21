@@ -13,18 +13,23 @@
     <p>Gaining Motivation</p>
 </div>
 </router-link>
+
 <router-link to="/blogPost/Goals">
-<div class="posts-container">
-    <img src="@/assets/goals.jpg" alt="goals" style="width:100%">
-    <p>Stick to your Goals</p>
-</div>
+    <div class="posts-container">
+        <BlogDetails/>
+    </div>
+
 </router-link>
+
 </template>
 
 <script>
+import BlogDetails from './BlogDetails.vue'
 export default {
     name: 'HomeView',
-    components: {}
+    components: {
+        BlogDetails,
+    },
 }
 </script>
 

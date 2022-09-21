@@ -4,16 +4,16 @@
         <div class="container">
             <img src="@/assets/searchglass.jpg" alt="searchglass">
         </div>
-        <div class="query">
+        <div>
             <input v-model="blogquery" type="text" placeholder="Search" />
         </div>
-
     </div>
 </div>
 
 <br>
 
-<div v-for="blog in filteredList()" :key="blog.id">
+<div class="totalposts">
+    <div v-for="blog in filteredList()" :key="blog.id">
     <div class="posts">
         <router-link :to="`/blogPost/${blog.name}`">
         {{ blog.message }}
@@ -24,6 +24,8 @@
 <div class="item error" v-if="blogquery&&!filteredList().length">
     <p>No results found!</p>
  </div>
+</div> 
+
 </template>
 
 <!-- // list, filter, query, for..loop matched results -->
@@ -55,15 +57,14 @@
 
 <style scoped>
 .container {
-    width: 100px;
-    height: 100px;
+    width: auto;
+    height: auto;
     float: left;
-    text-align: center;
 }
 
 .container img {
-    width: 100%;
-    height: auto;
+    width: 20%;
+    height: 20%;
     float: left;
 }
 
@@ -71,6 +72,8 @@
     width: 39.063vw;
     height: 7.889vw;
     color: white;
+    position: relative;
+    float: right;
 }
 
 ::placeholder {
@@ -86,13 +89,13 @@ input[type=text] {
 
 .totalquery {
     margin: auto;
-    width: 30%;
-    padding: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 4vw;
     font-size: 50px;
-}
-
-.querycolored {
+    margin-bottom: 0.30em;
     background-color: #194F77;
+    padding: 10px;
 }
 
 input {
@@ -112,5 +115,9 @@ input {
 .posts a {
   text-decoration: none;
   color: #194F77;
+}
+
+.totalposts{
+    margin-top: 100px;
 }
 </style>

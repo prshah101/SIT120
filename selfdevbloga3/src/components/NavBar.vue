@@ -8,7 +8,7 @@
     </a>
 </div>
 <br>
-<router-view></router-view>
+<router-view imageurl= "goals.jpg"></router-view>
 </template>
 
 <script>
