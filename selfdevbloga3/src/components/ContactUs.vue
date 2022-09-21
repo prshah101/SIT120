@@ -44,7 +44,7 @@
         <p id="confirmMessage" style="display:none; color:white"> {{name}}, your enquiry has been sent! We will get back to you shortly.</p>
         <br>
     </div>
-        <br><br><br>
+    <br><br><br>
 </div>
 </template>
 
@@ -53,10 +53,10 @@ export default {
     name: 'ContactUs',
     data() {
         return {
-                name: '',
-                phoneNum: '',
-                enquiry: '',
-                email: '',
+            name: '',
+            phoneNum: '',
+            enquiry: '',
+            email: '',
         }
     },
     methods: {
@@ -76,12 +76,6 @@ export default {
     text-align: center;
 }
 
-@media (max-width: 600px) {
-    .flex-container {
-        flex-direction: column;
-    }
-}
-
 .contact-details {
     background-color: #D2E1Ef;
     padding: 10px;
@@ -93,8 +87,6 @@ export default {
     padding: 10px;
     flex: 50%;
 }
-
-/* Responsive End */
 
 .sub-detail {
     background-color: #ffffff;
@@ -116,18 +108,67 @@ export default {
 
 h2 {
     color: #ffffff;
+    font-size: 4vw;
 }
 
 input {
     border: none;
     font-size: 1.5vw;
-    width:25vw;
+    width: 25vw;
 }
 
-textarea{
+textarea {
     border: none;
     font-size: 1.5vw;
-    height:10vw;
+    height: 10vw;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .sub-detail {
+        background-color: #ffffff;
+        padding: 0.5vw;
+        font-size: 2vw;
+        width: 30vw;
+        position: relative;
+        left: 30vw;
+    }
+
+    .sub-detail {
+        background-color: #ffffff;
+        padding: 3vw;
+        font-size: 5vw;
+        width: 60vw;
+        position: relative;
+        left: 12vw;
+    }
+
+    .forum-detail {
+        background-color: #ffffff;
+        padding: 3vw;
+        font-size: 5vw;
+        width: 70vw;
+        left: 7vw;
+        position: relative;
+    }
+
+    h2 {
+        font-size: 8vw;
+    }
+
+    input {
+        font-size: 4vw;
+        width: 25vw;
+    }
+
+    textarea {
+        font-size: 4vw;
+        height: 30vw;
+    }
+
 }
 
 button {
