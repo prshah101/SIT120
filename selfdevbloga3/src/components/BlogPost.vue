@@ -1,7 +1,9 @@
 <template>
     <div>
         <h1>{{title}}</h1>
-        <img :src="require('@/assets/' + imageurl + '')" style="width:100%"/>
+        <div class="blog-picture">
+            <img :src="require('@/assets/' + imageurl + '')" style="width:100%"/>
+        </div>
     </div>
 </template>
 
@@ -33,5 +35,8 @@ export default {
 
     
 <style scoped>
-
-    </style>
+.blog-picture{
+    width: 50vw;
+    height: 50vw;
+}
+</style>
