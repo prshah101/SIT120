@@ -1,9 +1,7 @@
 <template>
     <div class="totalquery">
-        <div class="imagecontainer">
-            <img src="@/assets/searchglass.jpg" alt="searchglass">
-        </div>
         <div class="inputcontainer" >
+            <i class="fa-solid fa-magnifying-glass"></i> &nbsp;
             <input v-model="blogquery" type="text" placeholder="Search" />
         </div>
     </div>
@@ -50,37 +48,25 @@
     </script>
 
 <style scoped>
-.imagecontainer {
-    width: auto;
-    height: auto;
-    float: left;
-}
-
-.imagecontainer img {
-    width: 10%;
-    height: 10%;
-    float: left;
-    left:40vw;
-    position: relative;
-}
-
 .inputcontainer {
     position: relative;
-    right:10vw;
+    right:-5vw;
 }
 
 ::placeholder {
     color: white;
     opacity: 1;
-    /* position: relative;
-    left: 30vw; */
 }
 
 input[type=text] {
     background-color: #194F77;
     color: white;
-    font-size: 40px;
-    width: 20vw;
+    font-size: 4vw;
+    width: 45vw;
+}
+
+.fa-magnifying-glass{
+    color: white;  
 }
 
 .totalquery {
@@ -122,6 +108,16 @@ input {
     left: 2vw;
 }
 
+input[type=text] {
+    font-size: 6vw;
+}
+
+}
+
+@media screen and (max-width: 752px) {
+    input[type=text] {
+    font-size: 7vw;
+}
 }
 
 @media screen and (max-width: 603px) {
