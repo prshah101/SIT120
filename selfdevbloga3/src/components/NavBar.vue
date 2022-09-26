@@ -85,4 +85,16 @@ export default {
     font-size:7vw;
   }
 }
+
+@media screen and (max-width: 934px) {
+  .navigationBar {
+  font-size: 3vw;
+}
+}
+
+@media screen and (max-width: 752px) {
+  .navigationBar {
+  font-size: 4vw;
+}
+}
 </style>

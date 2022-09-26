@@ -72,18 +72,21 @@
 ::placeholder {
     color: white;
     opacity: 1;
+    /* position: relative;
+    left: 30vw; */
 }
 
 input[type=text] {
     background-color: #194F77;
     color: white;
     font-size: 40px;
+    width: 20vw;
 }
 
 .totalquery {
     margin: auto;
     text-align: center;
-    width: 100%;
+    width: 90vw;
     font-size: 50px;
     margin-bottom: 0.30em;
     background-color: #194F77;
@@ -118,33 +121,18 @@ input {
     position: relative;
     left: 2vw;
 }
+
 }
 
-@media screen and (max-width: 1184px) {
-    .inputcontainer {
+@media screen and (max-width: 603px) {
+    .totalquery {
     position: relative;
-    left:10vw;
-}
+    width: 88vw;
 }
 
-@media screen and (max-width: 1007px) {
-    .inputcontainer {
+.inputcontainer {
     position: relative;
-    left:15vw;
-}
-}
-
-@media screen and (max-width: 814px) {
-    .inputcontainer {
-    position: relative;
-    left:20vw;
-}
-}
-
-@media screen and (max-width: 544px) {
-    .inputcontainer {
-    position: relative;
-    left:30vw;
+    right:2vw;
 }
 }
 

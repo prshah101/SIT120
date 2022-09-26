@@ -46,6 +46,8 @@ export default {
 .title {
     font-size: 3vw;
     color: #194F77;
+    left: -41vw;
+    position: relative;
 }
 
 p {

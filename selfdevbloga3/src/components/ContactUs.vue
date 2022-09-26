@@ -123,7 +123,7 @@ textarea {
     height: 10vw;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 723px) {
     .flex-container {
         flex-direction: column;
     }
@@ -150,8 +150,8 @@ textarea {
         background-color: #ffffff;
         padding: 3vw;
         font-size: 5vw;
-        width: 70vw;
-        left: 7vw;
+        width: 80vw;
+        left: 2.5vw;
         position: relative;
     }
 
@@ -161,12 +161,24 @@ textarea {
 
     input {
         font-size: 4vw;
-        width: 25vw;
+        width: 45vw;
+        left: -5vw;
+        position: relative;
     }
 
     textarea {
         font-size: 4vw;
         height: 30vw;
+    }
+
+    ::placeholder{
+        font-size: 3vw;
+    }
+
+    label{
+        font-size: 4vw;
+        left: -2vw;
+        position: relative;
     }
 
 }
