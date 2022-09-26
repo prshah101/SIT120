@@ -3,13 +3,11 @@
 <p class="title">Latest Posts</p>
 <router-link to="/blogPost/Habits">
     <div class="posts-container">
-        <!-- <img src="@/assets/habit.jpg" alt="habit" style="width:100%"> -->
         <BlogDetails> <p>How to Build Habit</p> </BlogDetails>
     </div>
 </router-link>
 <router-link to="/blogPost/Motivation">
 <div class="posts-container">
-    <!-- <img src="@/assets/motivation.png" alt="motivation" style="width:100%"> -->
     <BlogDetails> <p>Gaining Motivation</p> </BlogDetails>
 </div>
 </router-link>
@@ -52,6 +50,7 @@ export default {
 
 p {
     color: #194F77;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    text-align: center;
 }
 </style>
