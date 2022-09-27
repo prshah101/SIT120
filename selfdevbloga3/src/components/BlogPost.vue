@@ -1,3 +1,8 @@
+<!--  This component contains the HTML, CSS and JS properties of the Blog Post View.
+      This is displayed a blog post is clicked on in either the Home View or the All Posts View.
+      It recieves the url of the image to be displayed from the router, which is it's parent component.
+--> 
+
 <template>
 <div>
     <h1>{{title}}</h1>
@@ -20,14 +25,10 @@ export default {
             body: '',
         }
     },
-    props: ['imageurl'],
-    mounted() {
+    props: ['imageurl'], //accepts imageurl as a prop from the router
+    mounted() {  //To get the value from the HTML part of my template
         const route = useRoute();
-        console.warn("route", route.params.title);
         this.title = route.params.title;
-    },
-    methods: {
-        findTitle() {}
     }
 }
 </script>

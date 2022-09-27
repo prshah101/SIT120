@@ -1,3 +1,8 @@
+<!--   This component contains the HTML, CSS, and JS properties of the Contact Us View.
+       Both the contact details of the company and the contact us forum is in one div class.
+       The content inside that is then seperated into its own div classes.
+-->
+
 <template>
 <div class="flex-container">
     <div class="contact-details">
@@ -40,7 +45,7 @@
         </div>
         <br>
 
-        <button v-on:click="confirm">Submit</button>
+        <button @:click="confirm">Submit</button>
         <p id="confirmMessage" style="display:none; color:white"> {{name}}, your enquiry has been sent! We will get back to you shortly.</p>
         <br>
     </div>
@@ -68,7 +73,6 @@ export default {
 </script>
 
 <style scoped>
-/* Responsive Boxes */
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -123,6 +127,14 @@ textarea {
     height: 10vw;
 }
 
+button {
+    background-color: white;
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+}
+
+/* The @media handles the element display at the different view ports */
 @media (max-width: 723px) {
     .flex-container {
         flex-direction: column;
@@ -181,12 +193,9 @@ textarea {
         position: relative;
     }
 
-}
+    p{
+        font-size: 4vw;
+    }
 
-button {
-    background-color: white;
-    border: none;
-    padding: 16px 32px;
-    text-decoration: none;
 }
 </style>

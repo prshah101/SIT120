@@ -1,3 +1,6 @@
+<!--  This component contains the HTML, CSS and JS properties of the All Posts View.
+--> 
+
 <template>
     <div class="totalquery">
         <div class="inputcontainer" >
@@ -98,6 +101,7 @@ input {
   color: #194F77;
 }
 
+/* The @media handles the element display at the different view ports */
 @media screen and (max-width: 878px) {
     .posts {
     background-color: #D2E1EF;
