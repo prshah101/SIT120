@@ -1,10 +1,14 @@
+<!--  This component contains the HTML and CSS properties of the Home View that displays the latest posts.
+     When a post is clicked on, the router navigates page to the BlogPost component.
+--> 
+
 <template>
 <br><br>
 <p class="title">Latest Posts</p>
 <router-link to="/blogPost/Habits">
     <div class="posts-container">
-        <BlogDetails>
-            <p>How to Build Habit</p>
+        <BlogDetails> <!-- The component, BlogDetails, is used to render the display for each of the 3 blog posts-->
+            <p>How to Build Habit</p> <!--  This is sent as a slot to the BlogDetails component-->
         </BlogDetails>
     </div>
 </router-link>
@@ -31,12 +35,11 @@ export default {
     name: 'HomeView',
     components: {
         BlogDetails,
-    },
+    }
 }
 </script>
 
 <style scoped>
-/* To ensure the posts container doesn't break  */
 * {
     box-sizing: border-box;
 }
@@ -61,6 +64,7 @@ p {
     text-align: center;
 }
 
+/* The @media handles the element display at the different view ports */
 @media screen and (max-width: 700px) {
     .title {
         font-size: 4.5vw;

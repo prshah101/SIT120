@@ -1,4 +1,4 @@
-<!--  Contains the Navigation Bar that is displayed constantly on the page. 
+<!--   This component contains the HTML, CSS, and JS properties of the Navigation Bar that is displayed constantly on the page. 
       It navigates the page to the different views, depending on what the user has clicked.
 -->
 

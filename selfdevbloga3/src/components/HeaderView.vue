@@ -1,4 +1,4 @@
-<!-- This components handles the HTML and CSS properties of the header that loads first in the page.
+<!-- This component contains the HTML and CSS properties of the header that loads in beginning of the page.
     If the initial component containing the Home View is loaded, it will display a unique header. Otherwise, 
     when other page views are loaded, it will display a standard header.
  -->

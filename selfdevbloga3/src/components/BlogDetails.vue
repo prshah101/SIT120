@@ -1,14 +1,17 @@
+<!--  This component contains the HTML and CSS properties of the Blog Details that will be displayed on the Home View.
+      The relevant caption is passed using slots when the component is used.
+--> 
+
 <template>
 <div class="post-container">
     <img src="@/assets/goals.jpg" alt="goals" style="width:100%" />
-    <slot></slot>
+    <slot></slot>  <!--  Displays the relevant caption recieved from the parent component, which is HomeView-->
 </div>
 </template>
 
 <script>
 export default ({
-    name: 'BlogDetails',
-    props: ['imageurl'],
+    name: 'BlogDetails'
 })
 </script>
 
