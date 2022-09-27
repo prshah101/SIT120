@@ -14,7 +14,7 @@
 <div v-for="blog in queriedList()" :key="blog.id">
     <div class="posts">
         <router-link :to="`/blogPost/${blog.param}`"> <!-- Routes each blog post to it's relevant URL-->
-            {{ blog.title }}
+            {{ blog.title }}  <!-- Displays the title of each blog post-->
         </router-link>
     </div>
     <br>
@@ -22,10 +22,10 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from "vue"; //Imported to access the template with ease.
 
-let blogquery = ref("");
-const blogs= [{
+let blogquery = ref(""); //Gets and stores the query typed by user.
+const blogs= [{ //The data that will be searched through.
                 id: 1,
                 title: 'How to Build a Habit',
                 param: 'Habits'
@@ -43,7 +43,7 @@ const blogs= [{
         ];
     function queriedList() {
         return blogs.filter((blog) => //Return the blogs that match the query sent by user
-        blog.title.toLowerCase().includes(blogquery.value.toLowerCase())
+        blog.title.toUpperCase().includes(blogquery.value.toUpperCase())
     );
 }
 </script>

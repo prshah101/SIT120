@@ -11,7 +11,7 @@ const routes = [
         name: 'Home',
         path: '/',
         component: HomeView,
-        meta: { heading: 'Self Improvement' , homepage: true}
+        meta: { heading: 'Self Improvement' , homepage: true} //heading and homepage is used by HeaderView (To display the right header and heading title.
     },
     {
         name: 'All Posts',
