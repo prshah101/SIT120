@@ -4,8 +4,8 @@
  -->
 
 <template>
+<!-- Use the route meta data to determine the page view to display, there are 2 options -->
 <div v-if="$route.meta.homepage">
-    <!-- Use the route meta data to determine the page view -->
     <img src="@/assets/purpose.jpg" alt="" style="width:100%;">
     <div class="page-title">Self Improvement</div>
     <div class="navbarline"></div>
