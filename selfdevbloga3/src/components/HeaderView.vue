@@ -4,14 +4,14 @@
  -->
 
 <template>
-<!-- Use the route meta data to determine the page view to display, there are 2 options -->
+<!-- Use the route meta data to determine which elements to display. If not Home View, display the default header -->
 <div v-if="$route.meta.homepage">
     <img src="@/assets/purpose.jpg" alt="" style="width:100%;">
     <div class="page-title">Self Improvement</div>
     <div class="navbarline"></div>
 </div>
 <div v-else>
-    <div class="subPage-title"> {{ $route.meta.heading }} </div> <!-- If not home view, display the default header -->
+    <div class="subPage-title"> {{ $route.meta.heading }} </div>
 </div>
 </template>
 
