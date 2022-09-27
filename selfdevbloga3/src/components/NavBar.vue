@@ -7,7 +7,7 @@
     <router-link to="/"> Home</router-link>
     <router-link to="/allPosts"> All Posts</router-link>
     <router-link to="/contactUs"> Contact Us</router-link>
-    <a href="javascript:void(0);" class="bars" @:click="addResponsiveness()"> <!--  Contains the 3 bars icon that appears when viewport is small-->
+    <a class="bars" @:click="addResponsiveness()"> <!--  Contains the 3 bars icon that appears when viewport is small-->
         <i class="fa fa-bars"></i>
     </a>
 </div>
