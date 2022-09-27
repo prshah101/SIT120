@@ -1,3 +1,7 @@
+<!--   This component is original parent component. 
+       It calls the other components that are displayed in combination on the page.
+-->
+
 <template>
 <HeaderView />
 <br>

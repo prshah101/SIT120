@@ -1,3 +1,5 @@
+//This JS File for the navigation of the Vue App. 
+//It accesses all the components that will be routed to, as well as the url they will use and their associated data.
 import {createWebHistory, createRouter} from 'vue-router'
 import HomeView from './components/HomeView.vue';
 import AllPosts from './components/AllPosts.vue';
@@ -31,11 +33,15 @@ const routes = [
     }
 ]
 
+//The constant, router, is a router that contains the Web History of the site and the routes.
+// routes is the constant created before this one.
 const router = createRouter({
     history:createWebHistory(),
     routes
 });
 
+//Before navigating from page to page, store the document's title as the name inside the router constant.
+//The document's title is shown on the browser's tab.
 router.beforeEach((to, from, next) => {
     document.title = to.name;
     next();
