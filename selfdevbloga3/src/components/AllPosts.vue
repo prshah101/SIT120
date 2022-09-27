@@ -42,10 +42,8 @@ const blogs= [{ //The data that will be searched through.
             }
         ];
     function queriedList() {
-        return blogs.filter((blog) => //Return the blogs that match the query sent by user
-        blog.title.toUpperCase().includes(blogquery.value.toUpperCase())
-    );
-}
+        return blogs.filter((blog) => blog.title.toUpperCase().includes(blogquery.value.toUpperCase()));  //Return the blogs that match the query sent by user
+    }
 </script>
 
 <style scoped>
