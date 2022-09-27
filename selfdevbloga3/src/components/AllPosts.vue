@@ -2,58 +2,56 @@
 --> 
 
 <template>
-    <div class="totalquery">
-        <div class="inputcontainer" >
-            <i class="fa-solid fa-magnifying-glass"></i> &nbsp;
-            <input v-model="blogquery" type="text" placeholder="Search" />
-        </div>
+<div class="totalquery">
+    <div class="inputcontainer">
+        <i class="fa-solid fa-magnifying-glass"></i> &nbsp;
+        <input v-model="blogquery" type="text" placeholder="Search" />
     </div>
+</div>
 
 <br>
 
-    <div v-for="blog in filteredList()" :key="blog.id">
+<div v-for="blog in queriedList()" :key="blog.id">
     <div class="posts">
-        <router-link :to="`/blogPost/${blog.name}`">
-        {{ blog.message }}
+        <router-link :to="`/blogPost/${blog.param}`"> <!-- Routes each blog post to it's relevant URL-->
+            {{ blog.title }}
         </router-link>
     </div>
     <br>
-<div class="item error" v-if="blogquery&&!filteredList().length">
-    <p>No results found!</p>
- </div>
-</div> 
-
+</div>
 </template>
+
 <script setup>
-    import { ref } from "vue";
-    let blogquery = ref("");
-    const blogs= [{
-                    id: 1,
-                    message: 'How to Build a Habit',
-                    name: 'Habits'
-                },
-                {
-                    id: 2,
-                    message: 'Gaining Motivation',
-                    name: 'Motivation'
-                },
-                {
-                    id: 3,
-                    message: 'Stick to your Goals',
-                    name: 'Goals'
-                }
-            ];
-    function filteredList() {
-      return blogs.filter((blog) =>
-        blog.message.toLowerCase().includes(blogquery.value.toLowerCase())
-      );
-    }
-    </script>
+import { ref } from "vue";
+
+let blogquery = ref("");
+const blogs= [{
+                id: 1,
+                title: 'How to Build a Habit',
+                param: 'Habits'
+            },
+            {
+                id: 2,
+                title: 'Gaining Motivation',
+                param: 'Motivation'
+            },
+            {
+                id: 3,
+                title: 'Stick to your Goals',
+                param: 'Goals'
+            }
+        ];
+    function queriedList() {
+        return blogs.filter((blog) => //Return the blogs that match the query sent by user
+        blog.title.toLowerCase().includes(blogquery.value.toLowerCase())
+    );
+}
+</script>
 
 <style scoped>
 .inputcontainer {
     position: relative;
-    right:-5vw;
+    right: -5vw;
 }
 
 ::placeholder {
@@ -68,8 +66,8 @@ input[type=text] {
     width: 45vw;
 }
 
-.fa-magnifying-glass{
-    color: white;  
+.fa-magnifying-glass {
+    color: white;
 }
 
 .totalquery {
@@ -97,47 +95,46 @@ input {
 }
 
 .posts a {
-  text-decoration: none;
-  color: #194F77;
+    text-decoration: none;
+    color: #194F77;
 }
 
 /* The @media handles the element display at the different view ports */
 @media screen and (max-width: 878px) {
     .posts {
-    background-color: #D2E1EF;
-    padding: 4vw;
-    font-size: 5vw;
-    width: 85vw;
-    position: relative;
-    left: 2vw;
-}
+        background-color: #D2E1EF;
+        padding: 4vw;
+        font-size: 5vw;
+        width: 85vw;
+        position: relative;
+        left: 2vw;
+    }
 
-input[type=text] {
-    font-size: 6vw;
-}
+    input[type=text] {
+        font-size: 6vw;
+    }
 
 }
 
 @media screen and (max-width: 752px) {
     input[type=text] {
-    font-size: 7vw;
-}
+        font-size: 7vw;
+    }
 
-.fa-magnifying-glass{
-    font-size: 7vw;
-}
+    .fa-magnifying-glass {
+        font-size: 7vw;
+    }
 }
 
 @media screen and (max-width: 603px) {
     .totalquery {
-    position: relative;
-    width: 88vw;
-}
+        position: relative;
+        width: 88vw;
+    }
 
-.inputcontainer {
-    position: relative;
-    right:2vw;
+    .inputcontainer {
+        position: relative;
+        right: 2vw;
+    }
 }
-}
-
 </style>
