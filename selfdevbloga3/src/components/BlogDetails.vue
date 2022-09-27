@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 export default ({
     name: 'BlogDetails',
     props: ['imageurl'],
@@ -14,9 +13,8 @@ export default ({
 </script>
 
 <style scoped>
-    .post-container {
+.post-container {
     padding: 0.78%;
     background-color: #D2E1EF;
 }
 </style>
-

@@ -118,6 +118,10 @@ input[type=text] {
     input[type=text] {
     font-size: 7vw;
 }
+
+.fa-magnifying-glass{
+    font-size: 7vw;
+}
 }
 
 @media screen and (max-width: 603px) {

@@ -3,21 +3,26 @@
 <p class="title">Latest Posts</p>
 <router-link to="/blogPost/Habits">
     <div class="posts-container">
-        <BlogDetails> <p>How to Build Habit</p> </BlogDetails>
+        <BlogDetails>
+            <p>How to Build Habit</p>
+        </BlogDetails>
     </div>
 </router-link>
 <router-link to="/blogPost/Motivation">
-<div class="posts-container">
-    <BlogDetails> <p>Gaining Motivation</p> </BlogDetails>
-</div>
+    <div class="posts-container">
+        <BlogDetails>
+            <p>Gaining Motivation</p>
+        </BlogDetails>
+    </div>
 </router-link>
 
 <router-link to="/blogPost/Goals">
     <div class="posts-container">
-        <BlogDetails> <p>Stick to your Goals</p> </BlogDetails>
+        <BlogDetails>
+            <p>Stick to your Goals</p>
+        </BlogDetails>
     </div>
 </router-link>
-
 </template>
 
 <script>
@@ -54,5 +59,16 @@ p {
     color: #194F77;
     font-size: 1.8vw;
     text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        font-size: 4.5vw;
+        left: -37vw;
+    }
+
+    p {
+    font-size: 3vw;
+    }
 }
 </style>

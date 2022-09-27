@@ -1,25 +1,28 @@
+<!-- This components handles the HTML and CSS properties of the header that loads first in the page.
+    If the initial component containing the Home View is loaded, it will display a unique header. Otherwise, 
+    when other page views are loaded, it will display a standard header.
+ -->
+
 <template>
 <div v-if="$route.meta.homepage">
+    <!-- Use the route meta data to determine the page view -->
     <img src="@/assets/purpose.jpg" alt="" style="width:100%;">
     <div class="page-title">Self Improvement</div>
     <div class="navbarline"></div>
 </div>
 <div v-else>
-    <div class="subPage-title"> {{ $route.meta.heading }} </div>
+    <div class="subPage-title"> {{ $route.meta.heading }} </div> <!-- If not home view, display the default header -->
 </div>
 </template>
 
 <script>
 export default {
-    name: 'HeaderView',
-    data() {
-        return {}
-    },
-    props: {}
+    name: 'HeaderView'
 }
 </script>
 
 <style scoped>
+/* Handles the animation for the Home View title (Start) */
 .page-title {
     position: absolute;
     color: #194F77;
@@ -42,6 +45,7 @@ export default {
         color: var(--color-2)
     }
 }
+/* Handles the animation for the Home View title (End) */
 
 .subPage-title {
     font-size: 6vw;
@@ -51,7 +55,7 @@ export default {
     background-color: #D2E1EF;
 }
 
-/* Nav Bar Line */
+/* Handles the animation for the line below the nav bar (Begin) */
 .navbarline {
     width: 1px;
     height: 2px;
@@ -63,18 +67,16 @@ export default {
     animation: increase 4s;
     animation-fill-mode: forwards;
 }
-
 @keyframes increase {
     100% {
         width: 62.5%;
     }
 }
+/* Handles the animation for the line below the nav bar (End) */
 
 @media screen and (max-width: 1279px) {
     .navbarline {
         display: none;
     }
 }
-
-/* Nav Bar Line End*/
 </style>

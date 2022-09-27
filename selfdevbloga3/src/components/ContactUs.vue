@@ -171,11 +171,11 @@ textarea {
         height: 30vw;
     }
 
-    ::placeholder{
+    ::placeholder {
         font-size: 3vw;
     }
 
-    label{
+    label {
         font-size: 4vw;
         left: -2vw;
         position: relative;

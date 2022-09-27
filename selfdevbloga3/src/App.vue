@@ -1,8 +1,7 @@
 <template>
-
- <HeaderView/>
- <br>
- <NavBar/>
+<HeaderView />
+<br>
+<NavBar />
 </template>
 
 <script>
@@ -10,10 +9,10 @@ import NavBar from './components/NavBar.vue'
 import HeaderView from './components/HeaderView.vue'
 
 export default {
-  name: 'App',
-  components: {
-    NavBar,
-    HeaderView,
-  }
+    name: 'App',
+    components: {
+        NavBar,
+        HeaderView,
+    }
 }
 </script>
